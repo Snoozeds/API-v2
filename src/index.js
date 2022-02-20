@@ -35,5 +35,5 @@ app.use('/fun/randomnumber', limiter, require('./routes/fun/randomnumber.js'))
 
 // 404 error
 app.get('*', function(req, res) {
-res.status(404).send({status: "404", Info: "Requested endpoint doesn't exist."})
+res.status(404).send({status: "404", info: "Requested endpoint doesn't exist."})
 });
