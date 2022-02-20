@@ -31,8 +31,9 @@ app.use('/animals/dog', limiter, require('./routes/animals/dog.js'));
 
 // Fun
 app.use('/fun/8ball', limiter, require('./routes/fun/8ball.js'));
+app.use('/fun/randomnumber', limiter, require('./routes/fun/randomnumber.js'))
 
 // 404 error
 app.get('*', function(req, res) {
-res.status(404).send({Status: "404", Info: "Requested endpoint doesn't exist."})
+res.status(404).send({status: "404", Info: "Requested endpoint doesn't exist."})
 });
